@@ -1,0 +1,16 @@
+
+
+<% @list_items.each do |item| %>
+  <li> <%= item %>  </li>
+<% end %>
+
+<form action="/grocery-list" method="post">
+  <label for="Name">New Item:</label>
+  <input type="text" name="Name" id="Name" required>
+
+  <button type="submit" name="Add">Add!
+</form>
+
+<% if @message %>
+<%= @message %>
+<% end %>
